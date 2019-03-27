@@ -59,19 +59,29 @@ html, body {
 }
 
 body {
-	width: 77%;
+	width: 100%;
 	margin: auto;
 }
 nav {
+	width: 77%;
 	display: flex;
 	justify-content: flex-end;
+	margin: auto;
+	position: sticky;
+	top: 0;
+	background-color: white;
 	a{
 		padding: 30px 0 30px 1.4rem;
 		font-size: 1.2rem;
 	}
 }
-main {
 @bigColor: rgb(233, 236,239);
+@bordercol: rgba(128, 128, 128, 0.349);
+
+main {
+	width: 77%;
+	margin: auto;
+
 	.intro {
 		border: 1px solid @bigColor;
 		background-color: @bigColor;
@@ -90,6 +100,9 @@ main {
 			h1{
 				font-size: 3rem;
 				margin-bottom: 20px;
+				span{
+					font-size: 1.8rem;
+				}
 			}
 			p{
 				font-size: 1.5rem;
@@ -138,7 +151,6 @@ main {
 				font-weight: bold;
 			}
 			.box{
-				@bordercol: rgba(128, 128, 128, 0.349);
 				border: 1px solid @bordercol;
 				border-radius: 3px;
 				div{
@@ -156,17 +168,40 @@ main {
 		margin-top: 50px;
 		.work-title{
 			font-size: 1.6rem;
+			font-weight: bold;
 		}
 		.work-grid{
 			.row{
 				display: flex;
 				justify-content: space-evenly;
-				border: 1px solid black;
-				flex
+				border-top: 1px solid @bordercol;
 				h1{
-					border: 1px solid red;
+					width: 100%;
+					padding: 15px 10px;
+				}
+				.first{
+					font-weight: bold;
 				}
 			}
+			.mainRow{
+				font-weight: bold;
+
+			}
+			.grey {
+				background-color: @bigColor;
+			}
 		}
+	}
+}
+
+footer {
+	width: 80%;
+	margin: auto;
+	background-color: grey;
+	text-align: center;
+	margin-top: 30px;
+	p{
+		padding: 20px;
+		color: white;
 	}
 }
