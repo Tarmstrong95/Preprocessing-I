@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -54,6 +54,89 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+	width: 77%;
+	margin: auto;
+}
+nav {
+	display: flex;
+	justify-content: flex-end;
+	a{
+		padding: 30px 0 30px 1.4rem;
+		font-size: 1.2rem;
+	}
+}
+main {
+@bigColor: rgb(233, 236,239);
+	.intro {
+		border: 1px solid @bigColor;
+		background-color: @bigColor;
+		border-radius: 5px;
+		padding-left: 2rem;
+		img{
+			width: 300px;
+			border-radius: 5px;
+			margin: 50px 0 20px;
+		}
+		.name{
+			text-align: left;
+			text-align: left;
+			border-bottom: 1px solid grey;
+			margin-bottom: 30px;
+			h1{
+				font-size: 3rem;
+				margin-bottom: 20px;
+			}
+			p{
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+			}
+		}
+		.name-det{
+			p{
+				font-size: 1.2rem;
+				margin: 20px 0;
+			}
+			button {
+				@btn-col: grey;
+				font-size: 1.4rem;
+				border-radius: 5px;
+				background: @btn-col;
+				color: white;
+				border: 1px solid @btn-col;
+				padding: 8px;
+				margin: 5px 0 50px;
+			}
+		}
+	}
+
+	.listen {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 80px;
+		.lis-up{
+			width: 50%;
+			h1{
+				font-size: 2.2rem;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			p{
+				line-height: 1.3;
+				font-size: 1.1rem;
+			}
+		}
+		.skills{
+			border: 1px solid grey;
+			width: 50%;
+			h1{
+				font-size: 1.6rem;
+				font-weight: bold;
+			}
+		}
+	}
+}
