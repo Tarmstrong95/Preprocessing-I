@@ -144,12 +144,9 @@ nav {
   width: 77%;
   display: flex;
   justify-content: flex-end;
-  margin: auto;
   top: 0;
-  left: 50%;
   background-color: white;
   font-size: 1.4rem;
-  transition: 0.4s;
 }
 nav a {
   padding: 0 0 0 1.4rem;
