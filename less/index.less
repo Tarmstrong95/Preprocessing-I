@@ -60,36 +60,55 @@ html, body {
 
 body {
 	width: 100%;
-	margin: auto;
+	margin: 74px auto 0;
+	background: rgba(209, 209, 209, 0.185);
 }
+
+
+@bigColor: rgb(233, 236,239);
+@bordercol: rgba(128, 128, 128, 0.349);
+@btn-col: rgb(100, 100, 255);
+
+// begin less/css
 nav {
+	padding: 25px 10px;
 	overflow: hidden;
 	width: 77%;
+	max-width: 1200px;
 	display: flex;
+	position: fixed;
 	justify-content: flex-end;
-	// margin: auto;
+	margin: auto;
 	top: 0;
+	left: 0;
+	right: 0;
 	background-color: white;
 	font-size: 1.4rem;
 	a{
 		padding: 0 0 0 1.4rem;
-	}
-	.shrink{
-
+		font-weight: bold;
+		&:hover {
+			text-decoration: underline;
+			cursor: pointer;
+			color: @btn-col;
+		}
 	}
 }
-@bigColor: rgb(233, 236,239);
-@bordercol: rgba(128, 128, 128, 0.349);
 
 main {
 	width: 77%;
+	max-width: 1200px;
 	margin: auto;
+	background: white;
 
 	.intro {
 		border: 1px solid @bigColor;
 		background-color: @bigColor;
 		border-radius: 5px;
-		padding-left: 2rem;
+		padding: 0 2rem;
+		width: 95%;
+		margin: auto;
+		box-shadow: 0px 5px 10px -5px grey;
 		img{
 			width: 300px;
 			border-radius: 5px;
@@ -118,7 +137,6 @@ main {
 				margin: 20px 0;
 			}
 			button {
-				@btn-col: grey;
 				font-size: 1.4rem;
 				border-radius: 5px;
 				background: @btn-col;
@@ -126,6 +144,12 @@ main {
 				border: 1px solid @btn-col;
 				padding: 8px;
 				margin: 5px 0 50px;
+				transition: .2s ease-in-out;
+				&:hover {
+					background: rgb(78, 78, 197);
+					transform: scale(1.1);
+					cursor: pointer;
+				}
 			}
 		}
 	}
@@ -133,7 +157,7 @@ main {
 	.listen {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 80px;
+		padding: 80px 10px;
 		.lis-up{
 			width: 50%;
 			h1{
@@ -168,10 +192,11 @@ main {
 	}
 
 	.work {
-		margin-top: 50px;
+		padding: 50px 20px;
 		.work-title{
 			font-size: 1.6rem;
 			font-weight: bold;
+			padding-bottom: 10px;
 		}
 		.work-grid{
 			.row{
@@ -199,12 +224,45 @@ main {
 
 footer {
 	width: 80%;
+	max-width: 1200px;;
 	margin: auto;
 	background-color: grey;
 	text-align: center;
-	margin-top: 30px;
 	p{
 		padding: 20px;
 		color: white;
 	}
 }
+
+.loading{
+	display:block;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: @btn-col;
+	.loader{
+		margin: 0 0 2em;
+		height: 100vh;
+		width: 100vw;
+		text-align: center;
+		padding: 1em;
+		margin: 0 auto 1em;
+		display: inline-block;
+		vertical-align: top;
+		svg{
+			margin-top: 35vh;
+		}
+	  }
+	  
+	  /*
+		Set the color of the icon
+	  */
+	  svg path,
+	  svg rect{
+		fill: #FF6700;
+	  }
+}
+// end less/css

@@ -137,29 +137,47 @@ body {
 }
 body {
   width: 100%;
-  margin: auto;
+  margin: 74px auto 0;
+  background: rgba(209, 209, 209, 0.185);
 }
 nav {
+  padding: 25px 10px;
   overflow: hidden;
   width: 77%;
+  max-width: 1200px;
   display: flex;
+  position: fixed;
   justify-content: flex-end;
+  margin: auto;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: white;
   font-size: 1.4rem;
 }
 nav a {
   padding: 0 0 0 1.4rem;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #6464ff;
 }
 main {
   width: 77%;
+  max-width: 1200px;
   margin: auto;
+  background: white;
 }
 main .intro {
   border: 1px solid #e9ecef;
   background-color: #e9ecef;
   border-radius: 5px;
-  padding-left: 2rem;
+  padding: 0 2rem;
+  width: 95%;
+  margin: auto;
+  box-shadow: 0px 5px 10px -5px grey;
 }
 main .intro img {
   width: 300px;
@@ -189,16 +207,22 @@ main .intro .name-det p {
 main .intro .name-det button {
   font-size: 1.4rem;
   border-radius: 5px;
-  background: grey;
+  background: #6464ff;
   color: white;
-  border: 1px solid grey;
+  border: 1px solid #6464ff;
   padding: 8px;
   margin: 5px 0 50px;
+  transition: 0.2s ease-in-out;
+}
+main .intro .name-det button:hover {
+  background: #4e4ec5;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 main .listen {
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
+  padding: 80px 10px;
 }
 main .listen .lis-up {
   width: 50%;
@@ -232,11 +256,12 @@ main .listen .skills .box div:last-child {
   border-bottom: none;
 }
 main .work {
-  margin-top: 50px;
+  padding: 50px 20px;
 }
 main .work .work-title {
   font-size: 1.6rem;
   font-weight: bold;
+  padding-bottom: 10px;
 }
 main .work .work-grid .row {
   display: flex;
@@ -258,12 +283,42 @@ main .work .work-grid .grey {
 }
 footer {
   width: 80%;
+  max-width: 1200px;
   margin: auto;
   background-color: grey;
   text-align: center;
-  margin-top: 30px;
 }
 footer p {
   padding: 20px;
   color: white;
+}
+.loading {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #6464ff;
+  /*
+		Set the color of the icon
+	  */
+}
+.loading .loader {
+  margin: 0 0 2em;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+.loading .loader svg {
+  margin-top: 35vh;
+}
+.loading svg path,
+.loading svg rect {
+  fill: #FF6700;
 }
